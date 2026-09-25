@@ -1,0 +1,22 @@
+<retina-description-file>
+  <!-- Wohrer & Kornprobst 2009, Fig. 10: primate 'parvo'-like OPL.
+       Input 5 deg = 500 px  ->  100 pixels per degree.
+       sigma_C, sigma_S, tau_S from the Fig. 10 caption; the rest from Fig. 5. -->
+  <retina temporal-step__sec="0.001"
+          input-luminosity-range="255"
+          pixels-per-degree="100.0">
+    <outer-plexiform-layer>
+      <linear-version
+          center-sigma__deg="0.03"
+          surround-sigma__deg="0.1"
+          center-tau__sec="0.01"
+          center-n__uint="2"
+          surround-tau__sec="0.004"
+          opl-amplification="10"
+          opl-relative-weight="1"
+          leaky-heat-equation="0">
+        <undershoot relative-weight="0.8" tau__sec="0.1"/>
+      </linear-version>
+    </outer-plexiform-layer>
+  </retina>
+</retina-description-file>

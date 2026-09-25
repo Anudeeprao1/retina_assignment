@@ -1,0 +1,22 @@
+<retina-description-file>
+  <!-- Webcam baseline: undershoot OPL at a 10 ms step (3 model steps per 30 fps frame).
+       pixels-per-degree=10 at 320 px width = the frame spans 32 deg of visual field,
+       so sigma_C = 0.1 deg = 1 px and sigma_S = 0.3 deg = 3 px. -->
+  <retina temporal-step__sec="0.01"
+          input-luminosity-range="255"
+          pixels-per-degree="10.0">
+    <outer-plexiform-layer>
+      <linear-version
+          center-sigma__deg="0.1"
+          surround-sigma__deg="0.3"
+          center-tau__sec="0.01"
+          center-n__uint="0"
+          surround-tau__sec="0.01"
+          opl-amplification="10"
+          opl-relative-weight="1"
+          leaky-heat-equation="0">
+        <undershoot relative-weight="0.7" tau__sec="0.1"/>
+      </linear-version>
+    </outer-plexiform-layer>
+  </retina>
+</retina-description-file>
